@@ -1,12 +1,31 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>RPS Multiplayer</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors Multiplayer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="lobby">
+    <h1>✊✋✌ Rock Paper Scissors</h1>
+    <input id="nameInput" type="text" placeholder="Tên của bạn" />
+    <input id="roomInput" type="text" placeholder="Mã phòng" />
+    <button id="joinBtn">Vào phòng</button>
+  </div>
+
+  <div id="game" style="display:none;">
+    <h2 id="roomTitle"></h2>
+    <div id="players"></div>
+    <div id="choices">
+      <button data-choice="rock">✊ Rock</button>
+      <button data-choice="paper">✋ Paper</button>
+      <button data-choice="scissors">✌ Scissors</button>
+    </div>
+    <h3 id="result"></h3>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
